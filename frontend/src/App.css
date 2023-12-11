@@ -1,42 +1,131 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import 'bulma/css/bulma.css';
+
+.App{
+  display: flex;
+  width:100vw;
+  /* padding:30px; */
+  height: 100vh;
+}
+.flex1{
+  flex: 1;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/*Navbar*/
+
+nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px ;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-color: #527072;
+  transition: all 0.6s ease-in-out;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.listItems{
+  list-style: none;
+  margin: 20px 10px;
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.6s ease-in-out;
+  color: white;
+}
+.listItems:hover{
+  background-color: rgb(229, 229, 229);
+  color: black;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.ChatArea{
+  height:100%;
+  flex:1;
+  border-left: 1px solid #CCDAE1;
 }
 
-.card {
-  padding: 2em;
+.bigProfile{
+  aspect-ratio: 1/1;
+  width: 200px;
+  border-radius: 50%;
+  border: 3px solid #527072;
+}
+.mymodal{
+  height: 350px;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow:6px 15px 27px #527072;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: white;
+  display: none;
+}
+.visible{
+  display: block;
 }
 
-.read-the-docs {
-  color: #888;
+.GoogleButton{
+  border: 1px solid black;
+  padding: 7px 58px;
+  margin-top: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: rgb(42, 41, 41);
+  color: white;
+}
+
+.SignupInput{
+  border: 1px solid rgb(150, 148, 148);
+  outline: none;
+  border-radius: 26px;
+  padding: 10px;
+  width: 278px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  background-color: transparent !important;
+}
+
+.LoginBox{
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 8px 10px 35px 20px rgb(175, 174, 174);
+  background: rgba(255, 255, 255, 0.723);
+  backdrop-filter: blur(10px);
+}
+.backgroundimage{
+  background-image: url("./assets/images/background.jpg");
+  background-size: cover;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.413);
+  backdrop-filter: blur(3px);
+  height: 100vh;
+}
+.textwhite{
+  color: white;
+}
+.BlueButton{
+  background-color: blue;
+    padding: 6px 120px;
+    border-radius: 20px;
+    margin-top: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.centerDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.borderbottom{
+  border-bottom: 3px solid rgb(255, 255, 255);
 }

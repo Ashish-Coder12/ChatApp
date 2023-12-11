@@ -1,0 +1,42 @@
+.ChatArea{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(217deg,#b190ba2a,#e8b5952c);
+    border-radius: 20px;
+    z-index: 20;
+}
+.chatList{
+    flex: 1;
+    /* background-image: url("https://www.shutterstock.com/image-vector/social-media-sketch-vector-seamless-600nw-1660950727.jpg");
+    background-position: center;
+    z-index: 10; */
+}
+.messageInput{
+background-color: white;
+width: 100%;
+margin: 20px;
+padding: 10px 5px;
+border-radius: 20px;
+display: flex;
+align-items: center;
+}
+.messageInput input{
+    flex: 1;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    color: rgb(100, 100, 100);
+}
+.messageInputArea {
+align-items: center;
+}
+.messageInputArea button{
+    height: 50px;
+    width: 60px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #DB6C4B;
+}

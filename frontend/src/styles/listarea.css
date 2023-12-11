@@ -1,0 +1,42 @@
+
+.ListArea{
+    width: 400px;
+    height:100%;
+    border-left: 1px solid #CCDAE1;
+}
+.searchbar {
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 10px 30px;
+    background-color: white;    
+}
+.searchbar input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.profile{
+    overflow-y: auto;
+    height: 85%;
+    margin-top: 10px;
+}
+.ProfileItems{
+    border-bottom: 1px solid rgb(215, 215, 215);
+    margin: 10px 20px;
+    padding: 10px 0px;
+}
+.ProfileItems img{
+    aspect-ratio: 1/1;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.name_area{
+    flex:1;
+}
+.name_area h3 {
+    font-weight: 800;
+    font-size: 16px;
+}
