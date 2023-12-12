@@ -7,7 +7,7 @@ export default function Signup() {
     }
   return (
     <div className='is-flex is-flex-direction-column is-align-items-center'>
-        <h1 className='headingfont'>Welcome to <span className='stylefont'>Pico</span></h1>
+        <h1 className='headingfont fontresize'>Welcome to <span className='stylefont'>Pico</span></h1>
         <p>Personalized Instant Connectivity Option</p>
         <div className='GoogleButton' onClick={()=>handleClick()}> <FaGoogle size={14} color='white' className='mr-3'/> Continue with google</div>
         <p className='my-2'>or</p>
