@@ -132,6 +132,10 @@ nav{
 .fontresize{
   font-size: 30px;
 }
+
+.flexdirection{
+  flex-direction: row;
+}
 @media(max-width:768px){
   .LoginBox{
     transform: scale(0.8);

@@ -10,6 +10,8 @@ import { FaTimes } from "react-icons/fa";
 
 export const Chat = () => {
   const [modal,setModal] = useState(false)
+
+  
   return (
     <div className='ChatArea'>
         <div className='is-flex is-align-items-center'>

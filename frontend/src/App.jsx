@@ -17,7 +17,7 @@ function App() {
     <>
       <div >
         <div className='App'>
-          <div className="is-flex">
+          <div className="is-flex flexdirection">
             <Navbar/>
             <List/>
           </div>

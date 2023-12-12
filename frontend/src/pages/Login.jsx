@@ -4,6 +4,9 @@ import Signin from '../Components/Signin'
 
 function Login() {
   const [page,setPage] = useState("login")
+  function name(params) {
+     change()
+  }
   return (
     <div className='backgroundimage '>
       <div className='login ' > 
