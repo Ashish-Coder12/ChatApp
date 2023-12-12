@@ -15,11 +15,15 @@ function App() {
   // Personalized Instant Connectivity Option
   return (
     <>
-      <div className='App'>
-      {/*  <Navbar/>
-        <List/>
-        <Chat/> */}
-        <Login/>
+      <div >
+        <div className='App'>
+          <div className="is-flex">
+            <Navbar/>
+            <List/>
+          </div>
+          <Chat/>
+        </div>
+        {/* <Login/> */}
       </div>
     </>
 
