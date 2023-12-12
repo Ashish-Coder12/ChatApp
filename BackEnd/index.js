@@ -1,7 +1,7 @@
 import express from "express";
 import * as Users from "./Data/data.js";
 import 'dotenv/config'
-import { cors } from "cors";
+import cors from "cors";
 
 const app  = express()
 
@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 app.get('/api/users', (req, res) => {
     res.send(Users)
   })
-app.get('/api/pawan', cors(corsOptions),(req, res) => {
+app.get('/api/pawan',(req, res) => {
     res.send("HII Pawan")
   })
 
