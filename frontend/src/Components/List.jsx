@@ -11,8 +11,10 @@ export const List = () => {
     setData(data.Users)
   }
   useEffect(() => {
-    // getusers()
-  }, [5000])
+    setTimeout(() => {
+    getusers()
+    }, 500);
+  }, [])
 
   return (
     <div className='ListArea'>
@@ -22,9 +24,13 @@ export const List = () => {
         <input placeholder='Search' />
       </div>
       {data == null ?
-        <>
+        <div className='profile pb-4'>
           <Skeletonloading />
-        </>
+          <Skeletonloading />
+          <Skeletonloading />
+          <Skeletonloading />
+          <Skeletonloading />
+        </div>
         :
         <div className='profile pb-4'>
           {data.map((item) => {
@@ -42,60 +48,15 @@ export const List = () => {
 function Skeletonloading() {
   return (
     <>
-    <div class="card">
-      <div class="avatar-skeleton"></div>
-      <div class="first-loader"></div>
-      <div class="second-loader"></div>
-      <div class="third-loader"></div>
-    </div>
-
-    <div class="card">
-      <div class="avatar-skeleton"></div>
-      <div class="first-loader"></div>
-      <div class="second-loader"></div>
-      <div class="third-loader"></div>
-    </div>
-
-    <div class="card">
-      <div class="avatar-skeleton"></div>
-      <div class="first-loader"></div>
-      <div class="second-loader"></div>
-      <div class="third-loader"></div>
-    </div>
-
-    <div class="card">
-      <div class="avatar-skeleton"></div>
-      <div class="first-loader"></div>
-      <div class="second-loader"></div>
-      <div class="third-loader"></div>
-    </div>
-
-    <div class="card">
-      <div class="avatar-skeleton"></div>
-      <div class="first-loader"></div>
-      <div class="second-loader"></div>
-      <div class="third-loader"></div>
-    </div>
-
-    <div class="card">
-      <div class="avatar-skeleton"></div>
-      <div class="first-loader"></div>
-      <div class="second-loader"></div>
-      <div class="third-loader"></div>
-    </div>
-
-    <div class="card">
-      <div class="avatar-skeleton"></div>
-      <div class="first-loader"></div>
-      <div class="second-loader"></div>
-      <div class="third-loader"></div>
-    </div>
-
-    <div class="card">
-      <div class="avatar-skeleton"></div>
-      <div class="first-loader"></div>
-      <div class="second-loader"></div>
-      <div class="third-loader"></div>
+    <div class="card is-flex is-align-items-center is-justify-content-space-between px-3 py-5">
+      <div className='is-flex '>
+        <div class="avatar-skeleton loaderanimation mr-3"></div>
+        <div className='is-flex is-flex-direction-column is-justify-content-space-around'>
+          <div class="first-loader loaderanimation"></div>
+          <div class="second-loader loaderanimation"></div>
+        </div>
+      </div>
+      <div class="third-loader loaderanimation"></div>
     </div>
     </>
 

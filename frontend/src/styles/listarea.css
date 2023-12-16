@@ -65,36 +65,29 @@ body {
 }
 
 .card {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* border-radius: -1px; */
+    background-color: transparent;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    border-radius: -1px;
     padding: 4px;
     text-align: center;
 }
-
-.first-loader {
-    width: 70px;
-    height: 13px;
+.loaderanimation{
     background: linear-gradient(90deg, var(--loader-background-color) 25%, var(--loader-highlight-color) 50%, var(--loader-background-color) 75%);
     background-size: 200% 100%;
     animation: loading 2s infinite ease-in-out;
     border-radius: 8px;
-    margin-bottom: 20px;
-    float: inline-end;
-    position: relative;
+}
+
+
+.first-loader {
+    width: 70px;
+    height: 13px;
     bottom: 46px;
     right: 21px;
 }
 .second-loader {
     width: 70px;
     height: 13px;
-    background: linear-gradient(90deg, var(--loader-background-color) 25%, var(--loader-highlight-color) 50%, var(--loader-background-color) 75%);
-    background-size: 200% 100%;
-    animation: loading 2s infinite ease-in-out;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    float: inline-end;
-    position: relative;
     bottom: 31px;
     right: 158px;
 }
@@ -102,13 +95,6 @@ body {
 .third-loader {
         width: 101px;
         height: 20px;
-        background: linear-gradient(90deg, var(--loader-background-color) 25%, var(--loader-highlight-color) 50%, var(--loader-background-color) 75%);
-        background-size: 200% 100%;
-        animation: loading 2s infinite ease-in-out;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        float: inline-start;
-        position: relative;
         bottom: 59px;
         left: 92px;
 }
@@ -116,15 +102,11 @@ body {
 .avatar-skeleton {
     width: 53px;
     height: 53px;
-    background: linear-gradient(90deg, var(--loader-background-color) 25%, var(--loader-highlight-color) 50%, var(--loader-background-color) 75%);
-    background-size: 200% 100%;
-    animation: loading 2s infinite ease-in-out;
     border-radius: 50%;
-    margin-bottom: 20px;
     left: 17px;
     top: 10px;
-    position: relative;
 }
+
 
 .cover-image-skeleton {
     width: 300px;
