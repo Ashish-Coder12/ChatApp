@@ -3,18 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import ListItems from './ListItems';
 
 export const List = () => {
-  const [data,setData] = useState(
-    [
-      {
-        id: 1,
-        name: "Loading",
-        last_message: "-----",
-        time: "--",
-        profile_image: ""
-      },
-      
-    ]
-  )
+  const [data,setData] = useState(null)
 
   async function getusers() {
     const response = await fetch("https://picoback.vercel.app/api/users")
@@ -22,8 +11,8 @@ export const List = () => {
     setData(data.Users)
   }
   useEffect(()=>{
-    getusers()
-  },[])
+    // getusers()
+  },[5000])
 
   return (
     <div className='ListArea'>
@@ -32,13 +21,29 @@ export const List = () => {
         <CiSearch color='black' size={20} />
         <input placeholder='Search' />
       </div>
-      <div className='profile pb-4'>
-      {data.map((item)=>{
-        return (
-          <ListItems key={item.id} username={item.name} image={item.profile_picture} last_message={item.last_message}  time={item.time} />
-        )
-      })}
-      </div>
+      {data==null?
+    <>
+    <Skeletonloading/>
+    </>
+    : 
+    <div className='profile pb-4'>
+    {data.map((item)=>{
+      return (
+        <ListItems key={item.id} username={item.name} image={item.profile_picture} last_message={item.last_message}  time={item.time} />
+      )
+    })}
+    </div>
+    }
+      
     </div>
   );
+}
+
+function Skeletonloading () {
+  return (
+    <div>
+     hello world
+    </div> 
+  )
+  
 }
