@@ -5,7 +5,12 @@
     background-image: linear-gradient(217deg,#b190ba2a,#e8b5952c);
     border-radius: 20px;
     z-index: 20;
+    height:100%;
+    border-left: 1px solid #CCDAE1;
+    flex: 1;
+    position: relative;
 }
+
 .chatList{
     flex: 1;
     /* background-image: url("https://www.shutterstock.com/image-vector/social-media-sketch-vector-seamless-600nw-1660950727.jpg");
@@ -39,4 +44,11 @@ align-items: center;
     border: none;
     outline: none;
     background-color: #DB6C4B;
+}
+@media(max-width:768px){
+    .ChatArea{
+        width: 100vw;
+        position:absolute;
+        z-index: -10;
+    }
 }

@@ -8,7 +8,7 @@ import { TbDoorExit } from "react-icons/tb";
 
 export const Navbar = () => {
   return (
-    <div className='is-flex is-flex-direction-column is-align-items-center'>
+    <div className='is-flex-direction-column is-align-items-center navbar'>
       <h3 className='mb-3 stylefont'>pico</h3>
       <nav>
           <div className='Upper'>

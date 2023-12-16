@@ -27,12 +27,12 @@ export const List = () => {
 
   return (
     <div className='ListArea'>
-      <h2 className='ml-6 mt-6 headingfont'>Message</h2>
+      <h2 className='ml-6 mt-3 headingfont'>Message</h2>
       <div className='searchbar is-flex is-align-items-center'>
         <CiSearch color='black' size={20} />
         <input placeholder='Search' />
       </div>
-      <div className='profile'>
+      <div className='profile pb-4'>
       {data.map((item)=>{
         return (
           <ListItems key={item.id} username={item.name} image={item.profile_picture} last_message={item.last_message}  time={item.time} />
