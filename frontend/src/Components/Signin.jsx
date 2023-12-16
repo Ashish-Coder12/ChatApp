@@ -1,6 +1,14 @@
 import React from 'react'
 import { FaGoogle } from "react-icons/fa";
+import { useNavigate} from 'react-router-dom';
+
 export default function Signin() {
+  const navigate = useNavigate();
+
+  function login() {
+    localStorage.setItem("unique_id","1")
+    navigate('/');
+  }
   return (
     <div className='centerDiv'>
         <h1 className='headingfont fontresize'>Weclome back to <span className='stylefont'>Pico</span></h1>
@@ -12,9 +20,8 @@ export default function Signin() {
             <input className='SignupInput' type="text" placeholder='UserName'/>
             <h4>Password</h4>
             <input className='SignupInput' type="password" placeholder='Password'/>
-            
         </div>
-        <div className='BlueButton' >Login</div>
+        <div className='BlueButton' onClick={()=>login()} >Login</div>
     </div>
   )
 }

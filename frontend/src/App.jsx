@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -11,10 +11,21 @@ import { Chat  } from "./Components/Chat";
 import Details from './Components/Details'
 import Login from './pages/Login'
 import MobNav from './Components/MobNav'
+import { useNavigate} from 'react-router-dom';
+
 
 function App() {
+  const navigate = useNavigate();
   const [count, setCount] = useState(0)
   // Personalized Instant Connectivity Option
+  useEffect(() => {
+    const data = localStorage.getItem('unique_id');
+    console.log(data);
+    if(data == null || data == ""){
+      navigate('/login');
+    }
+  }, [])
+  
   return (
     <>
       <div >
@@ -26,7 +37,6 @@ function App() {
           </div>
           <Chat/>
         </div>
-        {/* <Login/> */}
       </div>
     </>
 
