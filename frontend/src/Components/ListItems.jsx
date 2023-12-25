@@ -9,7 +9,6 @@ export default function ListItems({
   function tunicate(string) {
     var sendback = string.substring(0, 10)
     return sendback + "..."
-    
   }
   return (
     <div className='ProfileItems is-flex is-align-items-center flex1'>

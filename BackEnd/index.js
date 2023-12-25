@@ -5,8 +5,18 @@ import 'dotenv/config'
 import cors from "cors";
 
 const app  = express()
+const corsOpts = {
+  origin: '*',
+  methods: [
+    'GET',
+    'POST',
+  ],
+  allowedHeaders: [
+    'Content-Type',
+  ],
+};
 
-app.use(cors())
+app.use(cors(corsOpts));
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -15,25 +25,20 @@ app.get('/', (req, res) => {
 app.get('/api/users', (req, res) => {
     res.send(Users)
   })
-app.get('/api/pawan',(req, res) => {
-    res.send("HII Pawan")
-  })
   app.post('/authenticate', (req, res) => {
-    // try {
-      
-    // } catch (error) {
-    //   res.status(500).json({ status: 'error', message: "Internal server Error" });
-    // }
-    console.log(req.body);
+    try {
+      console.log(req.body);
       const { username, password } = req.body;
       const data = Accounts.Accounts
-      const user = data.find(u => u.username === username && u.password === password);
+      const user = data.find(u => u.username == username && u.password == password);
       if (user) {
         res.status(200).json({ status: 'success', unique_id: user.unique_id });
       } else {
         res.status(401).json({ status: 'failed', message: 'Invalid credentials' });
       }
-   
+    } catch (error) {
+      res.status(500).json({ status: 'error', message: "Internal server Error" });
+    }   
   });
 
 app.listen(process.env.PORT ,()=>{
