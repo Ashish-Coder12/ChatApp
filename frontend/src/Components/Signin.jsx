@@ -8,7 +8,7 @@ export default function Signin() {
   const [password,setPassword]= useState("")
   async function login() {
     // alert(username + "," +password)
-    const response = await fetch("http://picoback.vercel.app/authenticate",{
+    const response = await fetch("http://localhost:9000/authenticate",{
       method:"POST",
       headers: {
         'Content-Type': 'application/json',
@@ -20,8 +20,13 @@ export default function Signin() {
     })
     const data = await response.json()
     console.log(data)
-    // localStorage.setItem("unique_id","1")
-    // navigate('/');
+    if(data.status == "success"){
+      localStorage.setItem("unique_id",data.unique_id)
+      navigate('/');
+    }else{
+      alert("Invalid Credtial")
+    }
+
   }
   
   return (

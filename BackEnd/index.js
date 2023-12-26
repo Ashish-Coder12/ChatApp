@@ -3,6 +3,9 @@ import * as Users from "./Data/data.js";
 import * as Accounts from "./Data/users.js";
 import 'dotenv/config'
 import cors from "cors";
+import { connectToDB } from "./config/db.js";
+import { configDotenv } from "dotenv";
+
 
 const app  = express()
 const corsOpts = {
@@ -18,7 +21,8 @@ const corsOpts = {
 
 app.use(cors(corsOpts));
 app.use(express.json());
-
+configDotenv()
+connectToDB()
 app.get('/', (req, res) => {
     res.send('Hello World!')
   })
