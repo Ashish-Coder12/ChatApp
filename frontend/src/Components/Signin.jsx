@@ -8,7 +8,7 @@ export default function Signin() {
   const [password,setPassword]= useState("")
   async function login() {
     // alert(username + "," +password)
-    const response = await fetch("http://localhost:9000/authenticate",{
+    const response = await fetch("https://picoback.vercel.app/authenticate",{
       method:"POST",
       headers: {
         'Content-Type': 'application/json',
