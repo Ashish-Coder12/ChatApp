@@ -1,10 +1,13 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useEffect } from 'react'
 import './form.css';
 
 
 const Signgin = ():ReactElement => {
 const [showPassword, setShowPassword] = React.useState(false);
 
+  useEffect(() => {
+    setShowPassword(false)
+  },[])
 
   return (
     <div className='Joining'>
