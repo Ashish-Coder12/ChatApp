@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #584CD7;
+  }
+
+/* sign in form style */
+
+.Joining {
+  padding: 0 1rem;
+}
+
+.sign-in-form{
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 390px;
+    margin-top: 8rem;
+}
+.title {
+    font-weight: bolder;
+}
+
+.sign-in-form label{
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.sign-in-form input{
+    margin-bottom: 25px;
+    padding: 17px 3px;
+    border-radius: 10px;
+    border:  1px solid#80808069;;
+}
+ .sign-in-form button {
+    /* vertical-align: #4CAF50; */
+    color: white;
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-transform: none;
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 500;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    background-color: var(--primary);
+ }
+.forgot {
+    color: black;
+    text-decoration: none;
+ }
+ .remember {
+     display: flex;
+     justify-content: space-between;
+ }
+ .forgot a {
+    color: black;
+ }
+ 
+ .no-account {
+    margin-top: 1.5rem;
+    color: black;
+    /* margin-left: 5rem; */
+ }
+.no-account a {
+    color: #ff5b78;
+    padding: 3px 3px;
+    text-decoration: underline;
+ }
+
+
+
+ /* .sign-in-form button:hover {
+    background-color: #45a049;;
+    /* color: white; */
+  
