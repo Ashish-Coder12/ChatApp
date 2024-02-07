@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { FaGoogle } from "react-icons/fa";
-import { useNavigate} from 'react-router-dom';
+// import { useNavigate} from 'react-router-dom';
 
 export default function Signin() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [username,setusername] = useState("")
   const [password,setPassword]= useState("")
   async function login() {
@@ -20,12 +20,12 @@ export default function Signin() {
     })
     const data = await response.json()
     console.log(data)
-    if(data.status == "success"){
-      localStorage.setItem("unique_id",data.unique_id)
-      navigate('/');
-    }else{
-      alert("Invalid Credtial")
-    }
+    // if(data.status == "success"){
+    //   localStorage.setItem("unique_id",data.unique_id)
+    //   navigate('/');
+    // }else{
+    //   alert("Invalid Credtial")
+    // }
 
   }
   

@@ -2,11 +2,9 @@ import React, { useState } from 'react'
 import Signup from '../Components/Signup'
 import Signin from '../Components/Signin'
 
+
 function Login() {
-  const [page,setPage] = useState("login")
-  function name(params) {
-     change()
-  }
+    const [page,setPage] = useState("login")
   return (
     <div className='backgroundimage '>
       <div className='login ' > 
