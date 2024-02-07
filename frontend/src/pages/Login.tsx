@@ -1,12 +1,12 @@
 import React from 'react'
-import Signin from '../components/Signin'
-// import Signup from '../components/Signup'
+// import Signin from '../components/Signin'
+import Signup from '../components/Signup'
 
 function login() {
   return (
     <div>
-      <Signin />
-      {/* <Signup /> */}
+      {/* <Signin /> */}
+      <Signup />
     </div>
   )
 }
