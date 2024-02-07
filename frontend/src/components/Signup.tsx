@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './form.css';
 
 const Signup = () => {
   const [showPassword, setShowPassword] = React.useState(false);
+  useEffect(() => {
+    setShowPassword(false)
+  },[])
   return (
     <div className='Joining'>
     <form className='sign-in-form'> 
