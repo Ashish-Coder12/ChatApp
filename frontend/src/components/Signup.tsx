@@ -15,8 +15,8 @@ const Signup = () => {
       <input type={showPassword ? "text" : "password"} name="password" id='password' placeholder='password'/>
       {/* <button onClick={() => setShowPassword(!showPassword)}>{showPassword ? "Hide" : "Show"}</button> */}
       <div className='remember'><span><input className='check' type="checkbox" /> <b>Remember me</b></span> <span className='forgot'><a href="/">Forgot password?</a></span></div>
-      <button type='submit'>Sign In</button>
-     <span className='no-account'>Don't have an account? <a href="/">Sign Up</a></span>
+      <button type='submit'>Sign Up</button>
+     {/* <span className='no-account'>Already have an account <a href="/">Sign In</a></span> */}
     </form>
   </div>
 )

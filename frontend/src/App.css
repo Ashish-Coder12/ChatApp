@@ -3,4 +3,20 @@
 :root{
   --primary: #584CD7;
 }
-
+.login-page{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login-switch{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+  align-self: center;
+  margin-bottom: 30px;
+}
+.Borderbottom{
+  border-bottom: 3px solid var(--primary);
+}
