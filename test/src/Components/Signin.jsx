@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { FaGoogle } from "react-icons/fa";
-// import { useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 export default function Signin() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [username,setusername] = useState("")
   const [password,setPassword]= useState("")
   async function login() {
+    // alert(username + "," +password)
     const response = await fetch("https://picoback.vercel.app/authenticate",{
       method:"POST",
       headers: {
@@ -19,12 +20,12 @@ export default function Signin() {
     })
     const data = await response.json()
     console.log(data)
-    // if(data.status == "success"){
-    //   localStorage.setItem("unique_id",data.unique_id)
-    //   navigate('/');
-    // }else{
-    //   alert("Invalid Credtial")
-    // }
+    if(data.status == "success"){
+      localStorage.setItem("unique_id",data.unique_id)
+      navigate('/');
+    }else{
+      alert("Invalid Credtial")
+    }
 
   }
   

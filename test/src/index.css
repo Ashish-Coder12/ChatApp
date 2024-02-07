@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+.stylefont{
+  font-family: 'Pacifico', cursive;
+}
+.headingfont{
+  font-family: 'Comfortaa', sans-serif;
+}
+
+body{
+  background-color: #F0F5F5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1{
+  font-size: 30px;
+}
+h2{
+  font-size: 25px;
+}
+h3{
+  font-size: 20px;
+}
+h4{
+  font-size: 15px;
+}
+h5{
+  font-size: 13px;
+}
+h6{
+  font-size: 10px;
+}

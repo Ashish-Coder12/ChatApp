@@ -1,0 +1,128 @@
+
+.ListArea{
+    width: 400px;
+    height:100%;
+    border-left: 1px solid #CCDAE1;
+}
+.searchbar {
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 10px 30px;
+    background-color: white;    
+}
+.searchbar input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.profile{
+    overflow-y: auto;
+    height: 85%;
+    margin-top: 10px;
+}
+.ProfileItems{
+    border-bottom: 1px solid rgb(215, 215, 215);
+    margin: 10px 20px;
+    padding: 10px 0px;
+    width: 90%;
+}
+.ProfileItems img{
+    aspect-ratio: 1/1;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.name_area{
+    flex:1;
+}
+.name_area h3 {
+    font-weight: 800;
+    font-size: 16px;
+}
+@media(max-width:768px){
+    .ListArea{
+        width: 100vw;
+    }
+}
+
+/* skeleton loading  */
+:root {
+    --loader-background-color: #EEEEEE;
+    --loader-highlight-color: #DEDEDE;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.card {
+    background-color: transparent;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    border-radius: -1px;
+    padding: 4px;
+    text-align: center;
+}
+.loaderanimation{
+    background: linear-gradient(90deg, var(--loader-background-color) 25%, var(--loader-highlight-color) 50%, var(--loader-background-color) 75%);
+    background-size: 200% 100%;
+    animation: loading 2s infinite ease-in-out;
+    border-radius: 8px;
+}
+
+
+.first-loader {
+    width: 70px;
+    height: 13px;
+    bottom: 46px;
+    right: 21px;
+}
+.second-loader {
+    width: 70px;
+    height: 13px;
+    bottom: 31px;
+    right: 158px;
+}
+
+.third-loader {
+        width: 101px;
+        height: 20px;
+        bottom: 59px;
+        left: 92px;
+}
+
+.avatar-skeleton {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    left: 17px;
+    top: 10px;
+}
+
+
+.cover-image-skeleton {
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(90deg, var(--loader-background-color) 25%, var(--loader-highlight-color) 50%, var(--loader-background-color) 75%);
+    background-size: 200% 100%;
+    animation: loading 2s infinite ease-in-out;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}

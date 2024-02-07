@@ -1,0 +1,27 @@
+.navbar{
+    display: flex;
+}
+.mobileNavbar{
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 100vw;
+    background-color: black;
+    height: 60px;
+    display: none;
+}
+
+@media(max-width:768px){
+    .navbar{
+        display: none;
+    }
+    .mobileNavbar{
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        width: 100vw;
+        background-color: #000;
+        height: 60px;
+        display: flex;
+    }
+}
