@@ -7,7 +7,6 @@ export default function Signin() {
   const [username,setusername] = useState("")
   const [password,setPassword]= useState("")
   async function login() {
-    // alert(username + "," +password)
     const response = await fetch("https://picoback.vercel.app/authenticate",{
       method:"POST",
       headers: {
